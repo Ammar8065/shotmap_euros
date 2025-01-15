@@ -3,7 +3,7 @@ import pandas as pd
 import json
 from mplsoccer import VerticalPitch
 
-st.title("Premier League 2024 Shot Map")
+st.title("Euros 2024 Shot Map")
 st.subheader("Filter to any Team/Player to see all of their shots taken")
 
 # Load and preprocess the data
@@ -62,5 +62,6 @@ def plot_shots(df, ax, pitch):
 pitch = VerticalPitch(pitch_type='statsbomb', line_zorder=2, pitch_color='#f0f0f0', line_color='black', half=True)
 fig, ax = pitch.draw(figsize=(10, 10))
 plot_shots(filter_df, ax, pitch)
-st.pyplot(fig)
+st.pyplot(fig)
+
 st.write("Project Made By Ammar Shahid!")
